@@ -16,13 +16,15 @@ class SpaceshipsController < ApplicationController
   def create
     @spaceship = Spaceship.new(spaceship_params)
     @spaceship.save
+    redirect_to spaceship_path(@spaceship)
+
 
   end
 
   private
 
   def spaceship_params
-    params.require(:spaceship).permit(:name, :description, :price, :photos: [])
+    params.require(:spaceship).permit(:name, :description, :price, photos: [])
   end
 
 end
