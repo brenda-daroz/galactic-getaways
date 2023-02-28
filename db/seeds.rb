@@ -20,7 +20,7 @@ puts 'Creating 10 fake spaceships...'
 10.times do
   spaceship = Spaceship.new(
     name:    Faker::Space.nasa_space_craft,
-    price: "#{Faker::Number.decimal(l_digits: 2)} $",
+    price: Faker::Number.decimal(l_digits: 2),
     description: Faker::Quote.yoda,
     user_id: User.all.sample.id
   )

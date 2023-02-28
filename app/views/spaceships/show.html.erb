@@ -1,0 +1,13 @@
+<h1><%= @spaceship.name %></h1>
+<img alt="image">
+<img alt="image">
+<img alt="image">
+<img alt="image">
+<img alt="image">
+
+<h3>Description</h3>
+
+<div><%= "#{@spaceship.price} $" %></div>
+<p><%= @spaceship.description %></p>
+<%= @spaceship.user.email.gsub("@gmail.com", '') %>
+<%= link_to "Book", new_spaceship_booking_path(@spaceship.id)%>
