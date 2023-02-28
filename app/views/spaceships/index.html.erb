@@ -2,7 +2,7 @@
 
   <% @spaceships.each do |spaceship| %>
       <div>
-      <%= cl_image_path spaceship.photo.key, crop: :thumb %>
-      <%= link_to spaceship.name, spaceship_path(list) %>
+      <%# <%= cl_image_path spaceship.photo.key, crop: :thumb %> %>
+      <%= link_to spaceship.name, spaceship_path(spaceship) %>
       </div>
   <% end %>
