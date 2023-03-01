@@ -10,4 +10,4 @@
 <div><%= "#{@spaceship.price} $" %></div>
 <p><%= @spaceship.description %></p>
 <%= @spaceship.user.email.gsub("@gmail.com", '') %>
-<%= link_to "Book", new_spaceship_booking_path(@spaceship.id)%>
+<%= class: "btn my-button" link_to "Book", new_spaceship_booking_path(@spaceship.id)%>
