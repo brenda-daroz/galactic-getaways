@@ -1,0 +1,19 @@
+.card_index {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.card_index > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card_index h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
