@@ -1,0 +1,23 @@
+.spaceship-images {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.myimage {
+  height:300px;
+  width: auto;
+  padding: 10px;
+}
+
+.subheaders {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mycontainer {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
