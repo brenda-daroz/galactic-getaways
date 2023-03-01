@@ -1,4 +1,5 @@
 class SpaceshipsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
 
   def index
     @spaceships = Spaceship.all
@@ -7,7 +8,6 @@ class SpaceshipsController < ApplicationController
   def new
     @spaceship = Spaceship.new
   end
-
 
   def show
     @spaceship = Spaceship.find(params[:id])

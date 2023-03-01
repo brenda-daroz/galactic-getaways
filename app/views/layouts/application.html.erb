@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE htm
 <html>
   <head>
     <title>GalacticGetaways</title>
@@ -12,6 +12,11 @@
 
   <body>
     <%= render "shared/navbar" %>
-    <%= yield %>
+    <div class="container">
+      <%# <p class="notice"><%= notice</p> %>
+      <%= render "shared/flashes" %>
+      <%# <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>
