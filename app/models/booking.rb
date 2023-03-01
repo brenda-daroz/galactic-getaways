@@ -4,5 +4,4 @@ class Booking < ApplicationRecord
 
   validates :spaceship, :user, presence: true
   # start and end date overlap?
-
 end
