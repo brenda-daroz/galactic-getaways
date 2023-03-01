@@ -1,5 +1,14 @@
 <h1>Pages#home</h1>
-<%= link_to "Book a spaceship", spaceships_path %>
-<%= link_to "List your spaceship", new_spaceship_path %>
 
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-background">
+  <div class="home-container">
+    <h1 class="home-title">Galactic Getaways</h1>
+    <p class="home-description">Sky is not the limit: to infinity and beyond</p>
+    <div class="home-buttons-container">
+      <button class="btn my-btn">List your spaceship</button>
+      <button class="btn my-btn-booking">Book a spaceship</button>
+      <%= link_to "Book a spaceship", spaceships_path %>
+      <%= link_to "List your spaceship", new_spaceship_path %>
+    </div>
+  </div>
+</div>
