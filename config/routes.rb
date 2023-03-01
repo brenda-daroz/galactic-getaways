@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "spaceships#index"
+  root to: "pages#home"
 
   # Defines the root path route ("/")
   # root "articles#index"
