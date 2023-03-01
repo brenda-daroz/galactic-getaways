@@ -1,8 +1,14 @@
 
-
-  <% @spaceships.each do |spaceship| %>
-      <div>
-      <%# <%= cl_image_path spaceship.photo.key, crop: :thumb %>
-      <%= link_to spaceship.name, spaceship_path(spaceship) %>
-      </div>
-  <% end %>
+<div class="wrapper">
+  <div class="grid_index">
+    <% @spaceships.each do |spaceship| %>
+        <div class="card_index">
+            <%= cl_image_tag spaceship.photos.first.key %>
+            <div class="card_body">
+              <h2 class="card-title"><%= spaceship.name %></h2>
+            <%= link_to '', spaceship_path(spaceship), class: 'card_link'  %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+.card_index {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  justify-content: center;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card_index > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card_body {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.card_index h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card_link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

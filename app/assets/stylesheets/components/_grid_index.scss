@@ -1,0 +1,15 @@
+// .container {
+//   margin: 0;
+// }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.grid_index {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}

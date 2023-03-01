@@ -79,3 +79,5 @@ end
 gem "devise"
 gem "faker"
 gem "cloudinary"
+gem "font-awesome-sass", "~> 6.1"
+
