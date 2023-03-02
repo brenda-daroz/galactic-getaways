@@ -23,9 +23,11 @@ puts 'Creating 10 fake spaceships...'
   spaceship = Spaceship.new(
     name:    Faker::Space.nasa_space_craft,
     price: Faker::Number.decimal(l_digits: 2),
+    address: "Friedrichstrasse #{rand(1..100)}, Berlin",
     description: Faker::Quote.yoda,
     user_id: User.all.sample.id
   )
+
   2.times do
     rand_num = rand(2..8)
     file = URI.open("app/assets/images/spaceships/#{rand_num}-spaceship Small.png")

@@ -3,6 +3,14 @@ class SpaceshipsController < ApplicationController
 
   def index
     @spaceships = Spaceship.all
+
+    @markers = @spaceships.geocoded.map do |spaceship|
+      {
+        lat: spaceship.latitude,
+        lng: spaceship.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {spaceship: spaceship})
+      }
+    end
   end
 
   def new
@@ -22,6 +30,6 @@ class SpaceshipsController < ApplicationController
   private
 
   def spaceship_params
-    params.require(:spaceship).permit(:name, :description, :price, :photos [])
+    params.require(:spaceship).permit(:name, :description, :price, :address, :photos [])
   end
 end
