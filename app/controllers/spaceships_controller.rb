@@ -2,10 +2,8 @@ class SpaceshipsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @spaceships = Spaceship.all
     if params[:query].present?
-      sql_query = "name ILIKE :query OR description ILIKE :query"
-      @spaceships = Spaceship.where(sql_query, query: "%#{params[:query]}%")
+      @spaceships = Spaceship.search_by_name_and_description(params[:query])
     else
       @spaceships = Spaceship.all
     end
