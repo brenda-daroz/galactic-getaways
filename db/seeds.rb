@@ -24,7 +24,10 @@ puts 'Creating 10 fake spaceships...'
     name:    Faker::Space.nasa_space_craft,
     price: Faker::Number.decimal(l_digits: 2),
     description: Faker::Quote.yoda,
-    user_id: User.all.sample.id
+    user_id: User.all.sample.id,
+    speed: rand(0-100),
+    power: rand(7-12),
+    seats: rand(1-29)
   )
   2.times do
     rand_num = rand(2..8)

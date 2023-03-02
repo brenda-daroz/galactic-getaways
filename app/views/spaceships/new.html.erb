@@ -2,6 +2,9 @@
         <%= simple_form_for @spaceship do |f| %>
           <%= f.input :name, placeholder: 'spaceship_name' %>
           <%= f.input :description, placeholder: 'description' %>
+          <%= f.input :speed, placeholder: 'speed' %>
+          <%= f.input :power, placeholder: 'power' %>
+          <%= f.input :seats, placeholder: 'seats' %>
           <%= f.input :price, placeholder: 'price' %>
           <%= f.input :photo, as: :file, input_html: { multiple: true } %>
           <%= f.submit %>
