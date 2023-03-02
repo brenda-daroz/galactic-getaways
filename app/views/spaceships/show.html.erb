@@ -3,24 +3,17 @@
   <p><%= "Posted by #{@spaceship.user.email.gsub("@gmail.com", '').capitalize}" %></p>
 
   <div class="images--flex">
-
       <%= cl_image_tag @spaceship.photos.first.key, class: "myimage-main" %>
 
     <div class="images--flex__inner">
-      <div class="myimage-1">
-        <%= cl_image_tag @spaceship.photos[1].key%>
+    <% @spaceship.photos.drop(1).each_with_index do |spaceship, index| %>
+      <div class='<%="myimage-#{index + 1}"%>'>
+        <%= cl_image_tag spaceship.key%>
       </div>
-       <div class="myimage-2">
-        <%= cl_image_tag @spaceship.photos[2].key%>
-      </div>
-       <div class="myimage-3">
-        <%= cl_image_tag @spaceship.photos[3].key%>
-      </div>
-       <div class="myimage-4">
-        <%= cl_image_tag @spaceship.photos[4].key%>
+      <% end %>
       </div>
     </div>
-  </div>
+
   <div class="show-content-container">
     <div class="subheaders">
       <h4>Features</h4>
