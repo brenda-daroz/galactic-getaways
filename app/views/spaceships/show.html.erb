@@ -25,15 +25,18 @@
     <div class="subheaders">
       <h4>Features</h4>
       <p><%= @spaceship.description %></p>
-      <p><%= @spaceship.speed %></p>
-      <p><%= @spaceship.power %></p>
-      <p><%= @spaceship.seats %></p>
+      <p><%= "Speed:   "%><% @spaceship.speed.to_i.times do  %>
+        <i class="fa-solid fa-frog my_icons"></i>
+      <% end %></p>
+      <p><%= "Power:   "%><% @spaceship.power.to_i.times do  %>
+        <i class="fa-solid fa-bolt my_icons"></i>
+      <% end %></p>
+      <p><%= "Seats:   "%><% @spaceship.seats.to_i.times do  %>
+       <i class="fa-solid fa-chair my_icons"></i>
+      <% end %></p>
     </div>
   <div class="show-content-booking">
     <h2><%= "$ #{@spaceship.price}" %></h2>
     <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary my_button'%>
   </div>
 </div>
-
-
-
