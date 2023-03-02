@@ -10,19 +10,15 @@
 
 .searchbar::placeholder {
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 15px;
 }
 
 .searchbar {
   background: none;
-  padding-left: 15px;
-  padding: 4px 4px;
+  padding: 4px 16px;
   margin-right: 10px;
   border-radius: 20px;
   border: solid 1px $ice;
   color: $ice;
-
-  &:hover {}
 }
 
 .searchbutton {
