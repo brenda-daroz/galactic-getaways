@@ -10,6 +10,7 @@ class SpaceshipsController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: {spaceship: spaceship}),
         marker_html: render_to_string(partial: "marker")
       }
+    end
 
     if params[:query].present?
       @spaceships = Spaceship.search_by_name_and_description(params[:query])
@@ -18,6 +19,7 @@ class SpaceshipsController < ApplicationController
     end
   end
 end
+
 
   def new
     @spaceship = Spaceship.new
@@ -30,7 +32,6 @@ end
   def create
     @spaceship = Spaceship.new(spaceship_params)
     @spaceship.save
-
   end
 
   private
