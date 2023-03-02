@@ -18,9 +18,7 @@ class SpaceshipsController < ApplicationController
       @spaceships = Spaceship.all
     end
   end
-
-
-
+  
   def new
     @spaceship = Spaceship.new
   end
