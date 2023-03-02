@@ -8,7 +8,8 @@ class SpaceshipsController < ApplicationController
       {
         lat: spaceship.latitude,
         lng: spaceship.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: {spaceship: spaceship})
+        info_window_html: render_to_string(partial: "info_window", locals: {spaceship: spaceship}),
+        marker_html: render_to_string(partial: "marker")
       }
     end
   end
