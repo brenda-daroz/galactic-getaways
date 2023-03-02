@@ -7,8 +7,13 @@
     <%= cl_image_tag @spaceship.photos.last.key, class: "myimage" %>
   </div>
 
-  <div class="subheaders"><h4>Features</h4> <%= "#{@spaceship.price} $" %></div>
 
-  <p><%= @spaceship.description %></p>
+<div class="subheaders"><h4>Features</h4> <%= "#{@spaceship.price} $" %></div>
+<p><%= @spaceship.description %></p>
+<p><%= @spaceship.speed %></p>
+<p><%= @spaceship.power %></p>
+<p><%= @spaceship.seats %></p>
+<%= @spaceship.user.email.gsub("@gmail.com", '') %>
   <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary'%>
 </div>
+
