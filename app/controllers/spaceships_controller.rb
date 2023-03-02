@@ -2,9 +2,7 @@ class SpaceshipsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-
     @spaceships = Spaceship.all
-
     @markers = @spaceships.geocoded.map do |spaceship|
       {
         lat: spaceship.latitude,
@@ -19,6 +17,7 @@ class SpaceshipsController < ApplicationController
       @spaceships = Spaceship.all
     end
   end
+end
 
   def new
     @spaceship = Spaceship.new
@@ -39,4 +38,5 @@ class SpaceshipsController < ApplicationController
   def spaceship_params
     params.require(:spaceship).permit(:speed, :seats, :power, :name, :description, :price, :photos [])
   end
+
 end
