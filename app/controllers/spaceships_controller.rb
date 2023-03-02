@@ -18,23 +18,30 @@ class SpaceshipsController < ApplicationController
       @spaceships = Spaceship.all
     end
   end
+
+  def show
+    @spaceship = Spaceship.find(params[:id])
+  end
   
   def new
     @spaceship = Spaceship.new
   end
 
-  def show
-    @spaceship = Spaceship.find(params[:id])
-  end
-
   def create
     @spaceship = Spaceship.new(spaceship_params)
-    @spaceship.save
+    @spaceship.user = current_user
+    if @spaceship.save!
+      redirect_to spaceship_path(@spaceship)
+    else
+      render :new
+    end
   end
 
   private
 
   def spaceship_params
-    params.require(:spaceship).permit(:speed, :seats, :power, :name, :description, :price, :photos [])
+    params
+    .require(:spaceship)
+    .permit(:speed, :seats, :power, :name, :description, :price, photos: [])
   end
 end
