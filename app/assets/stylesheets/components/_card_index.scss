@@ -7,6 +7,10 @@
   border-radius: 5px;
   position: relative;
   padding: 10px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .card_index>img {

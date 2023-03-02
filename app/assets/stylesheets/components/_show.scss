@@ -1,17 +1,5 @@
-.spaceship-images {
-  display: flex;
-  align-items: center;
-  // margin-top: 20px;
-  // margin-bottom: 20px;
-}
-
-.spaceship-main {
-  width: 50%;
-  height: 300px;
-}
-
 .spaceship-main img {
-  width: inherit;
+  width: 100%;
   height: 100%;
 }
 
@@ -21,7 +9,9 @@
 }
 
 .mycontainer {
-  padding: 50px 200px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
 }
@@ -32,33 +22,76 @@
 
 .show-content-container {
   display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 
 .show-content-booking {
-  border: 1px solid black;
-  padding: 20px;
-  width: 40%;
+  // border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px 0;
+  min-width: 25%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(98, 33, 109, 0.15) 0px 1px 3px 1px;
 }
 
 .show-content-booking-price {
   font-size: 1.2em;
 }
 
+.myimage-main {
+  border-radius: 10px 0 0 10px;
+}
 
-.spaceship-interior {
+/* General Image Styling */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Flexbox-based solution: */
+.images--flex {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  height: 500px;
+}
+
+.images--flex>* {
+  flex: 1;
+}
+
+.images--flex__inner {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  align-items: stretch;
+  padding-left: 10px;
 }
 
-.spaceship-interior .myimage {
+.images--flex__inner>* {
   width: 50%;
+  height: 50%;
 }
 
-.spaceship-interior img {
-  width: calc(100% - (20px * 2));
-  margin: 20px;
+.myimage-1 {
+  padding: 0 10px 10px 0;
+}
+
+.myimage-2 {
+  padding: 0 0 10px 0;
+
+  & img {
+    border-radius: 0 10px 0 0;
+  }
+}
+
+.myimage-3 {
+  padding: 0 10px 0px 0;
+}
+
+.myimage-4 img {
+  border-radius: 0 0 10px 0;
 }
