@@ -26,10 +26,15 @@ puts 'Creating 10 fake spaceships...'
     description: Faker::Quote.yoda,
     user_id: User.all.sample.id
   )
-  2.times do
+  1.times do
     rand_num = rand(2..8)
     file = URI.open("app/assets/images/spaceships/#{rand_num}-spaceship-Small.png")
     spaceship.photos.attach(io: file, filename: "#{rand_num}.png", content_type: "image/png")
+  end
+  4.times do
+    rand_number = rand(1..10)
+    file = URI.open("app/assets/images/real_spaceships/#{rand_number}-realspace.png")
+    spaceship.photos.attach(io: file, filename: "#{rand_number}real.png", content_type: "image/png")
   end
   spaceship.save!
 end
