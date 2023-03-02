@@ -18,7 +18,7 @@ class SpaceshipsController < ApplicationController
       @spaceships = Spaceship.all
     end
   end
-
+  
   def new
     @spaceship = Spaceship.new
   end
@@ -37,5 +37,4 @@ class SpaceshipsController < ApplicationController
   def spaceship_params
     params.require(:spaceship).permit(:speed, :seats, :power, :name, :description, :price, :photos [])
   end
-
 end
