@@ -25,10 +25,15 @@
     <div class="subheaders">
       <h4>Features</h4>
       <p><%= @spaceship.description %></p>
+      <p><%= @spaceship.speed %></p>
+      <p><%= @spaceship.power %></p>
+      <p><%= @spaceship.seats %></p>
     </div>
   <div class="show-content-booking">
     <h2><%= "$ #{@spaceship.price}" %></h2>
     <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary my_button'%>
   </div>
 </div>
-</div>
+
+
+
