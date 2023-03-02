@@ -2,21 +2,21 @@
   <h1><%= @spaceship.name %></h1>
   <p><%= "Posted by #{@spaceship.user.email.gsub("@gmail.com", '').capitalize}" %></p>
 
-  <div class="spaceship-images">
-    <div class="spaceship-main">
+  <div class="images--flex">
+
       <%= cl_image_tag @spaceship.photos.first.key, class: "myimage-main" %>
-    </div>
-    <div class="spaceship-interior">
-      <div class="myimage">
+
+    <div class="images--flex__inner">
+      <div class="myimage-1">
         <%= cl_image_tag @spaceship.photos[1].key%>
       </div>
-       <div class="myimage">
+       <div class="myimage-2">
         <%= cl_image_tag @spaceship.photos[2].key%>
       </div>
-       <div class="myimage">
+       <div class="myimage-3">
         <%= cl_image_tag @spaceship.photos[3].key%>
       </div>
-       <div class="myimage">
+       <div class="myimage-4">
         <%= cl_image_tag @spaceship.photos[4].key%>
       </div>
     </div>
@@ -34,6 +34,3 @@
     <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary my_button'%>
   </div>
 </div>
-
-
-
