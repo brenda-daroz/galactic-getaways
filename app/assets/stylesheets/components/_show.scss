@@ -6,6 +6,7 @@
 .subheaders {
   // display: flex;
   justify-content: space-between;
+  width: 60%;
 }
 
 .mycontainer {
@@ -30,6 +31,7 @@
   // border: 1px solid black;
   border-radius: 10px;
   padding: 30px 0;
+  margin-left: 20px;
   min-width: 25%;
   display: flex;
   align-items: center;

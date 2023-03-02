@@ -14,13 +14,10 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-      <%# <p class="notice"><%= notice</p> %>
-      <%= render "shared/flashes" %>
-      <%# <p class="alert"><%= alert %></p>
-      <%# <div class="my-container"> %>
-      <%= yield %>
-      <%# </div> %>
-      <%= render "shared/footer"  %>
+    <div class="page-container">
+      <div class="navbar-container"><%= render "shared/navbar" %></div>
+      <div class="content-container my-container"><%= yield %></div>
+      <div class="footer-container"><%= render "shared/footer" %></div>
+  </div>
   </body>
 </html>
