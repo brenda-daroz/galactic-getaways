@@ -1,1 +1,71 @@
 // Specific CSS for your home-page
+
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.home-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: asset-url('backgrounds/5509862.jpg');
+  background-size: cover;
+}
+
+.home-title {
+  color: $light-green;
+  font-size: 4em;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px $black;
+}
+
+.home-description {
+  color: $ice;
+  font-size: 2em;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 5px $black;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.my-btn,
+.my-btn-booking {
+  // background-color: $light-green;
+  border: 1px solid $green;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+
+.my-btn {
+  &:hover {
+    color: $green;
+    background-color: $ice;
+  }
+
+  color: $ice;
+}
+
+.my-btn-booking {
+  &:hover {
+    color: $green;
+    background-color: $ice;
+  }
+
+  background-color: $green;
+  color: $ice;
+}
