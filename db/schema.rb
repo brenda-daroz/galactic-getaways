@@ -60,6 +60,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_110441) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.integer "seats"
     t.integer "power"
     t.integer "speed"

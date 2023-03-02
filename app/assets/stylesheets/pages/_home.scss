@@ -43,32 +43,65 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.my-btn,
-.my-btn-booking {
-  // background-color: $light-green;
-  border: 1px solid $green;
-  margin: 0 20px;
+
+// .my-btn,
+// .my-btn-booking {
+//   // background-color: $light-green;
+//   border: 1px solid $green;
+//   margin: 0 20px;
+//   border-radius: 10px;
+//   font-size: larger;
+// }
+
+// .my-btn {
+//   &:hover {
+//     color: $green;
+//     background-color: $ice;
+//   }
+
+//   color: $ice;
+// }
+
+// .my-btn-booking {
+//   &:hover {
+//     color: $green;
+//     background-color: $ice;
+//   }
+
+//   background-color: $green;
+//   color: $ice;
+// }
+
+.my_home_button {
+  margin: 20px;
+  padding: 10px;
   border-radius: 10px;
-  font-size: larger;
-}
-
-.my-btn {
-  &:hover {
-    color: $green;
-    background-color: $ice;
-  }
-
+  margin-top: 30px;
+  width: fit-content;
   color: $ice;
-}
-
-.my-btn-booking {
-  &:hover {
-    color: $green;
-    background-color: $ice;
-  }
-
   background-color: $green;
+  border: 2px solid $green;
+  &:hover {
+    color: $green;
+    border: 2px solid $green;
+    background-color: whitesmoke;
+  }
+}
+
+.my_secondary_home_button {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: fit-content;
   color: $ice;
+  background-color: transparent;
+  border: 2px solid $green;
+  &:hover {
+    color: $green;
+    border: 2px solid $green;
+    background-color: whitesmoke;
+  }
 }
 
 // @media screen and (max-width: 400px) {
