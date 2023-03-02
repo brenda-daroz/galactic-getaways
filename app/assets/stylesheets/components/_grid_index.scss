@@ -5,6 +5,9 @@
 .wrapper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .grid_index {

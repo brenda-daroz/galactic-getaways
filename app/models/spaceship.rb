@@ -12,5 +12,4 @@ class Spaceship < ApplicationRecord
 
   # validates :name, uniqueness: true
   validates :description, length: { minimum: 10 }
-
 end

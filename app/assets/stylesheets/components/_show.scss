@@ -1,23 +1,64 @@
 .spaceship-images {
   display: flex;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  // margin-top: 20px;
+  // margin-bottom: 20px;
 }
 
-.myimage {
-  height:300px;
-  width: auto;
-  padding: 10px;
+.spaceship-main {
+  width: 50%;
+  height: 300px;
+}
+
+.spaceship-main img {
+  width: inherit;
+  height: 100%;
 }
 
 .subheaders {
-  display: flex;
+  // display: flex;
   justify-content: space-between;
 }
 
 .mycontainer {
-  padding: 50px;
+  padding: 50px 200px;
   display: flex;
   flex-direction: column;
+}
+
+.show-title {
+  margin: 50px 0;
+}
+
+.show-content-container {
+  display: flex;
+}
+
+.show-content-booking {
+  border: 1px solid black;
+  padding: 20px;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show-content-booking-price {
+  font-size: 1.2em;
+}
+
+
+.spaceship-interior {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.spaceship-interior .myimage {
+  width: 50%;
+}
+
+.spaceship-interior img {
+  width: calc(100% - (20px * 2));
+  margin: 20px;
 }
