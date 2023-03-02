@@ -5,5 +5,5 @@ class Spaceship < ApplicationRecord
   has_many_attached :photos
 
   # validates :name, uniqueness: true
-  validates :description, length: { minimum: 10 }
+  # validates :description, length: { minimum: 10 }
 end

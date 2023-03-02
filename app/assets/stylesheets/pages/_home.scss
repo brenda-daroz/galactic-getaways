@@ -11,23 +11,23 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: calc(100vh - 66px);
   width: 100vw;
   background-image: asset-url('backgrounds/5509862.jpg');
   background-size: cover;
 }
 
-.home-title {
-  color: $light-green;
-  font-size: 4em;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 5px $black;
-}
+// .home-title {
+//   color: $light-green;
+//   font-size: 3em;
+//   margin-bottom: 30px;
+//   text-shadow: 1px 1px 5px $black;
+// }
 
 .home-description {
   color: $ice;
-  font-size: 2em;
-  margin-bottom: 50px;
+  font-size: 1.5em;
+  margin: 50px 0;
   text-shadow: 1px 1px 5px $black;
 }
 
@@ -35,11 +35,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 50px;
+  padding: 50px 70px;
   background: rgba(255, 255, 255, 0.31);
-  border-radius: 16px;
+  border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.5px);
+  backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -49,6 +49,7 @@
   border: 1px solid $green;
   margin: 0 20px;
   border-radius: 10px;
+  font-size: larger;
 }
 
 .my-btn {
@@ -69,3 +70,13 @@
   background-color: $green;
   color: $ice;
 }
+
+// @media screen and (max-width: 400px) {
+//   .home-container {
+//     background: 0;
+//     border-radius: 0;
+//     box-shadow: 0;
+//     backdrop-filter: 0;
+//     border: 0;
+//   }
+// }
