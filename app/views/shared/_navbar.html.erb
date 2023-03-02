@@ -10,14 +10,16 @@
     </button>
 
     <% unless controller_name == "pages" %>
-      <div>
+      <div class="">
         <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
+            class: "searchbar",
             placeholder: "Find a spaceship"
           %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
+          <%= button_tag "search", type: "submit", class: "searchbutton" do %>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          <% end %>
         <% end %>
       </div>
     <% end %>
