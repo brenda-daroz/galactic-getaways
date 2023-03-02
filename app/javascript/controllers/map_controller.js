@@ -12,7 +12,7 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/dark-v11"
+      style: "mapbox://styles/jandac/cler6egmc00hb01kguk7agveu"
     })
 
     this.#addMarkersToMap()
@@ -23,7 +23,7 @@ export default class extends Controller {
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window_html)
-    
+
 
       // Create a HTML element for your custom marker
       const customMarker = document.createElement("div")
