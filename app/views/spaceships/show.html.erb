@@ -1,14 +1,39 @@
 <div class="mycontainer">
   <h1><%= @spaceship.name %></h1>
-  <p><%= "from #{@spaceship.user.email.gsub("@gmail.com", '')}" %></p>
+  <p><%= "Posted by #{@spaceship.user.email.gsub("@gmail.com", '').capitalize}" %></p>
 
   <div class="spaceship-images">
-    <%= cl_image_tag @spaceship.photos.first.key, class: "myimage" %>
-    <%= cl_image_tag @spaceship.photos.last.key, class: "myimage" %>
+    <div class="spaceship-main">
+      <%= cl_image_tag @spaceship.photos.first.key, class: "myimage-main" %>
+    </div>
+    <div class="spaceship-interior">
+      <div class="myimage">
+        <%= cl_image_tag @spaceship.photos[1].key%>
+      </div>
+       <div class="myimage">
+        <%= cl_image_tag @spaceship.photos[2].key%>
+      </div>
+       <div class="myimage">
+        <%= cl_image_tag @spaceship.photos[3].key%>
+      </div>
+       <div class="myimage">
+        <%= cl_image_tag @spaceship.photos[4].key%>
+      </div>
+    </div>
   </div>
-
-  <div class="subheaders"><h4>Features</h4> <%= "#{@spaceship.price} $" %></div>
-
-  <p><%= @spaceship.description %></p>
-  <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary'%>
+  <div class="show-content-container">
+    <div class="subheaders">
+      <h4>Features</h4>
+      <p><%= @spaceship.description %></p>
+      <p><%= @spaceship.speed %></p>
+      <p><%= @spaceship.power %></p>
+      <p><%= @spaceship.seats %></p>
+    </div>
+  <div class="show-content-booking">
+    <h2><%= "$ #{@spaceship.price}" %></h2>
+    <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary my_button'%>
+  </div>
 </div>
+
+
+

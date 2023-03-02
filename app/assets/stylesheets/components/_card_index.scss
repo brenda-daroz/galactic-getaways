@@ -1,21 +1,23 @@
 .card_index {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   justify-content: center;
   padding-bottom: 10px;
   border-radius: 5px;
   position: relative;
+  padding: 10px;
 }
 
-.card_index > img {
+.card_index>img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .card_body {
-  text-align: center;
+  text-align: start;
   padding-top: 10px;
 }
 

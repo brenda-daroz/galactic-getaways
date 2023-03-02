@@ -21,11 +21,14 @@ puts 'Creating 10 fake spaceships...'
 
 10.times do
   spaceship = Spaceship.new(
-    name:    Faker::Space.nasa_space_craft,
+    name: Faker::Space.nasa_space_craft,
     price: Faker::Number.decimal(l_digits: 2),
     address: "Friedrichstrasse #{rand(1..100)}, Berlin",
     description: Faker::Quote.yoda,
-    user_id: User.all.sample.id
+    user_id: User.all.sample.id,
+    speed: rand(0-100),
+    power: rand(7-12),
+    seats: rand(1-29)
   )
   1.times do
     rand_num = rand(2..8)

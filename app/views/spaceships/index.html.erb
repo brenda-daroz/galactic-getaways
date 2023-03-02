@@ -1,11 +1,14 @@
 
 <div class="wrapper">
-  <div class="grid_index">
-    <% @spaceships.each do |spaceship| %>
+
+  <h1 class="show-title">Galaxy Getaways</h1>
+    <div class="grid_index">
+      <% @spaceships.each do |spaceship| %>
           <div class="card_index">
-            <%= cl_image_tag spaceship.photos.first.key %>
-            <div class="card_body">
-              <h2 class="card-title"><%= spaceship.name %></h2>
+              <%= cl_image_tag spaceship.photos.first.key %>
+              <div class="card_body">
+                <h2 class="card-title"><%= spaceship.name %></h2>
+                <p>$ <%= spaceship.price  %></h2>
               <%= link_to '', spaceship_path(spaceship), class: 'card_link'  %>
             </div>
           </div>
@@ -18,3 +21,4 @@
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+

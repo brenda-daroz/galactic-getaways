@@ -1,9 +1,12 @@
-<h1>new spaceship</h1>
-<%= simple_form_for @spaceship do |f| %>
-  <%= f.input :name, input_html: { class: 'my_input', placeholder: 'spaceship_name' } %>
-  <%= f.input :description, input_html: { class: 'my_input', placeholder: 'description' } %>
-  <%= f.input :price, input_html: { class: 'my_input', placeholder: 'price' } %>
-  <%= f.input :photo, as: :file, input_html: { multiple: true, class: 'my_input' } %>
-  <%= f.submit class: "btn my_button" %>
-<% end %>
+
+        <%= simple_form_for @spaceship do |f| %>
+          <%= f.input :name, placeholder: 'spaceship_name', input_html: { class: 'my_input', placeholder: 'spaceship_name' } %>
+          <%= f.input :description, input_html: { class: 'my_input', placeholder: 'description' } %>
+          <%= f.input :speed, placeholder: 'speed' %>
+          <%= f.input :power, placeholder: 'power' %>
+          <%= f.input :seats, placeholder: 'seats' %>
+          <%= f.input :price, input_html: { class: 'my_input', placeholder: 'price' } %>
+          <%= f.input :photos, input_html: { multiple: true, class: 'my_input' } %>
+          <%= f.submit class: "btn my_button" %>
+        <% end %>
 
