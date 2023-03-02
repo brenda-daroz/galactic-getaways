@@ -9,8 +9,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <%# unless root_path %>
-      <div class="nav-item">
+    <% unless controller_name == "pages" %>
+      <div>
         <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :query,
             params[:query],
@@ -20,7 +20,7 @@
           <%= submit_tag "Search", class: "btn btn-primary" %>
         <% end %>
       </div>
-    <%# end %>
+    <% end %>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
