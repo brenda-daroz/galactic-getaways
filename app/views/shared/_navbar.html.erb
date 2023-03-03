@@ -1,52 +1,52 @@
-
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-  <div class="container-avatar-search">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "logos/logo-light.png", class: "hvr-grow" %>
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <% unless controller_name == "pages" %>
-      <div class="">
-        <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "searchbar",
-            placeholder: "Find a spaceship"
-          %>
-          <%= button_tag "search", type: "submit", class: "searchbutton" do %>
-            <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="container-avatar-search">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "logos/logo-light.png" , class: "hvr-grow" %>
           <% end %>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <% unless controller_name=="pages" %>
+              <div class="">
+                <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+                  <%= text_field_tag :query, params[:query], class: "searchbar" , placeholder: "Find a spaceship" %>
+                    <%= button_tag "search" , type: "submit" , class: "searchbutton" do %>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <% end %>
+                        <% end %>
+              </div>
+              <% end %>
+    </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item active">
-          <%= link_to "All Spaceships", spaceships_path, class: "nav-link" %>
+          <%= link_to "All Spaceships" , spaceships_path, class: "nav-link" %>
         </li>
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to "List your spaceship", new_spaceship_path ,class: "nav-link" %>
+            <%= link_to "List your spaceship" , new_spaceship_path ,class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%#= image_tag "", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <i class="fa-solid fa-user-astronaut nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Dashboard", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
+            <%#= image_tag "" , class: "avatar dropdown-toggle" , id: "navbarDropdown" , data: { bs_toggle: "dropdown"
+              }, 'aria-haspopup' : true, 'aria-expanded' : false %>
+              <i class="fa-solid fa-user-astronaut nav-link" id="navbarDropdown" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Dashboard" , "#" , class: "dropdown-item" %>
+                  <%= link_to "Log out" , destroy_user_session_path, class: "dropdown-item" , data: {turbo_method:
+                    :delete} %>
+              </div>
           </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Login" , new_user_session_path, class: "nav-link" %>
+            </li>
+            <% end %>
       </ul>
     </div>
   </div>
