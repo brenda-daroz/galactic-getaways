@@ -21,8 +21,15 @@ class SpaceshipsController < ApplicationController
 
   def show
     @spaceship = Spaceship.find(params[:id])
+    @markers = {
+        lat: @spaceship.geocode[0],
+        lng: @spaceship.geocode[1],
+        info_window_html: render_to_string(partial: "info_window", locals: {spaceship: @spaceship}),
+        marker_html: render_to_string(partial: "marker")
+      }
+
   end
-  
+
   def new
     @spaceship = Spaceship.new
   end
@@ -42,6 +49,6 @@ class SpaceshipsController < ApplicationController
   def spaceship_params
     params
     .require(:spaceship)
-    .permit(:speed, :seats, :power, :name, :description, :price, photos: [])
+    .permit(:address, :speed, :seats, :power, :name, :description, :price, photos: [])
   end
 end

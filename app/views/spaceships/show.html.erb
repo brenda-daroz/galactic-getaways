@@ -1,6 +1,7 @@
 <div class="mycontainer">
   <h1><%= @spaceship.name %></h1>
   <p><%= "Posted by #{@spaceship.user.email.gsub("@gmail.com", '').capitalize}" %></p>
+  <a class="btn my_button" href="#map">Go To Map</a>
 
   <div class="images--flex">
       <%= cl_image_tag @spaceship.photos.first.key, class: "myimage-main" %>
@@ -32,4 +33,10 @@
     <h2><%= "$ #{@spaceship.price}" %></h2>
     <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary my_button'%>
   </div>
+</div>
+
+ <div id="map" style="width: 100%; height: 300px; margin: 0 auto 20px;"
+    data-controller="singlemap"
+    data-singlemap-markers-value="<%= @markers.to_json %>"
+    data-singlemap-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>

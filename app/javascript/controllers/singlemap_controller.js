@@ -1,10 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="map"
+// Connects to data-controller="singlemap"
 export default class extends Controller {
   static values = {
     apiKey: String,
-    markers: Array
+    markers: Object
   }
 
   connect() {
@@ -15,6 +15,7 @@ export default class extends Controller {
       style: "mapbox://styles/jandac/cler6egmc00hb01kguk7agveu"
     })
 
+   this.markers = [this.markersValue]
 
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
@@ -22,7 +23,7 @@ export default class extends Controller {
 
 
   #addMarkersToMap() {
-    this.markersValue.forEach((marker) => {
+    this.markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window_html)
 
 
@@ -40,7 +41,7 @@ export default class extends Controller {
 
     #fitMapToMarkers() {
       const bounds = new mapboxgl.LngLatBounds()
-      this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+      this.markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
       this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
     }
 
