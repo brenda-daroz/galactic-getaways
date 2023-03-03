@@ -1,32 +1,46 @@
 .my_input {
   background-color: #F2F2F2;
-  color: #8552F2;
+  color: $dark_blue;
+  border-radius: 10px;
+}
+
+.my_input_purple {
+  background-color: #F2F2F2;
+  color: $purple;
+  border-radius: 10px;
+}
+
+.my_input_date {
+  background-color: #F2F2F2;
+  color: rgba(157, 121, 176, 0.6);
   border-radius: 10px;
 }
 
 .my_input::placeholder {
-  color: #8552F2;
+  color: rgba(157, 121, 176, 0.6);
 }
 
 .searchbar::placeholder {
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 15px;
 }
 
 .searchbar {
   background: none;
-  padding-left: 15px;
-  padding: 4px 4px;
+  padding: 4px 16px;
   margin-right: 10px;
   border-radius: 20px;
   border: solid 1px $ice;
   color: $ice;
-
-  &:hover {}
+  &:hover {
+    border: solid 1px $light-green;
+  }
 }
 
 .searchbutton {
   border: none;
   background: none;
   color: $ice;
+  &:hover {
+    color: $light-green;
+  }
 }
