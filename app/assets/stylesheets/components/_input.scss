@@ -1,6 +1,12 @@
 .my_input {
   background-color: #F2F2F2;
-  color: #8552F2;
+  color: $dark_blue;
+  border-radius: 10px;
+}
+
+.my_input_purple {
+  background-color: #F2F2F2;
+  color: $purple;
   border-radius: 10px;
 }
 
