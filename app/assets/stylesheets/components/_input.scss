@@ -19,10 +19,16 @@
   border-radius: 20px;
   border: solid 1px $ice;
   color: $ice;
+  &:hover {
+    border: solid 1px $green;
+  }
 }
 
 .searchbutton {
   border: none;
   background: none;
   color: $ice;
+  &:hover {
+    color: $green;
+  }
 }
