@@ -5,7 +5,7 @@
 }
 
 .my_input::placeholder {
-  color: #8552F2;
+  color: rgba(157, 121, 176, 0.6);
 }
 
 .searchbar::placeholder {
@@ -20,7 +20,7 @@
   border: solid 1px $ice;
   color: $ice;
   &:hover {
-    border: solid 1px $green;
+    border: solid 1px $light-green;
   }
 }
 
@@ -29,6 +29,6 @@
   background: none;
   color: $ice;
   &:hover {
-    color: $green;
+    color: $light-green;
   }
 }
