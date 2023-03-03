@@ -8,8 +8,13 @@
   flex-grow: 0;
 }
 
+#navbarDropdown {
+  cursor: pointer;
+}
+
 .navbar-lewagon .navbar-brand img {
   width: 50px;
+
 }
 
 .nav-link {
@@ -48,4 +53,8 @@
 .hvr-grow:focus,
 .hvr-grow:active {
   transform: scale(1.1);
+}
+
+.navbar-nav {
+  align-items: center;
 }
