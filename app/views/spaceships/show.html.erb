@@ -17,41 +17,53 @@
 
   <div class="show-content-container">
     <div class="subheaders">
-    <div class="subheaders-features show-content-booking">
-      <h4>Features</h4>
-      <div class="features-content">
-      <div>
-      <p>Speed</p>
-      <p><% @spaceship.speed.to_i.times do  %>
-        <i class="fa-solid fa-frog my_icons"></i>
-      <% end %>
-      </p>
-      </div>
-      <div>
-      <p>Power</p>
-      <p><% @spaceship.power.to_i.times do  %>
-        <i class="fa-solid fa-bolt my_icons"></i>
-      <% end %>
-      </p>
-      </div>
-      <div>
-      <p>Seats</p>
-      <p><% @spaceship.seats.to_i.times do  %>
-       <i class="fa-solid fa-chair my_icons"></i>
-      <% end %></p>
-      </div>
-      </div>
+      <div class="subheaders-features show-content-booking">
+        <h4>Features</h4>
+        <div class="features-content">
+          <div>
+            <p>Speed</p>
+            <p>
+              <% @spaceship.speed.to_i.times do  %>
+                <i class="fa-solid fa-frog my_icons"></i>
+              <% end %>
+              <% number = 5 - (@spaceship.speed.to_i) %>
+              <% number.times do  %>
+                <i class="fa-solid fa-frog my_icons_grey"></i>
+              <% end %>
+            </p>
+          </div>
+          <div>
+            <p>Power</p>
+            <p><% @spaceship.power.to_i.times do  %>
+              <i class="fa-solid fa-bolt my_icons"></i>
+            <% end %>
+            <% (5 - @spaceship.power.to_i).times do  %>
+              <i class="fa-solid fa-bolt my_icons_grey"></i>
+            <% end %>
+            </p>
+          </div>
+          <div>
+            <p>Seats</p>
+            <p><% @spaceship.seats.to_i.times do  %>
+              <i class="fa-solid fa-chair my_icons"></i>
+            <% end %>
+            <% ( 5 - @spaceship.seats.to_i).times do  %>
+              <i class="fa-solid fa-chair my_icons_grey"></i>
+            <% end %>
+            </p>
+          </div>
+        </div>
       </div>
       <div class="subheaders-description">
-      <h4>Description</h4>
-      <p><%= @spaceship.description %></p>
-    </div>
+        <h4>Description</h4>
+        <p><%= @spaceship.description %></p>
+      </div>
     </div>
     <div class="show-content-booking">
-    <h2><%= "$ #{@spaceship.price}" %></h2>
-    <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary my_button'%>
+      <h2><%= "$ #{@spaceship.price}" %></h2>
+      <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary my_button'%>
+    </div>
   </div>
-</div>
 
  <div id="map" style="width: 100%; height: 300px; margin: 0 auto 20px;"
     data-controller="singlemap"
