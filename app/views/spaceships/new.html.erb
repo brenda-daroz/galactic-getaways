@@ -5,6 +5,7 @@
           <%= f.input :speed, collection: 1..6, include_blank: "speed" %>
           <%= f.input :power, collection: 1..6, include_blank: "power" %>
           <%= f.input :seats, collection: 1..6, include_blank: "select" %>
+          <%= f.input :address, input_html: { class: 'my_input', placeholder: 'Rudi-Dutschke-Strasse 26' } %>
           <%= f.input :price, input_html: { class: 'my_input', placeholder: 'price' } %>
           <%= f.input :photos, input_html: { multiple: true, class: 'my_input' } %>
           <%= f.submit class: "btn my_button" %>
