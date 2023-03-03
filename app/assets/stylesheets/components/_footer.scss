@@ -43,3 +43,13 @@
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
 }
+
+.footer-title,
+.footer-owners {
+  color: $ice;
+  opacity: 0.7;
+}
+
+.footer-copyright {
+  text-align: center;
+}
