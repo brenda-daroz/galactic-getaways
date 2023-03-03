@@ -1,7 +1,7 @@
 <div class="mycontainer">
   <h1><%= @spaceship.name %></h1>
-  <p><%= "Posted by #{@spaceship.user.email.gsub("@gmail.com", '').capitalize}" %></p>
   <a class="btn my_button_map" href="#map">Go To Map</a>
+  <p class="position"><%= "Posted by #{@spaceship.user.email.gsub("@gmail.com", '').capitalize}" %></p>
 
   <div class="images--flex">
       <%= cl_image_tag @spaceship.photos.first.key, class: "myimage-main" %>
