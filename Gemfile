@@ -81,5 +81,5 @@ gem "faker"
 gem "cloudinary"
 gem "geocoder"
 gem "pg_search"
-
 gem "bootstrap"
+gem "active_storage_validations"

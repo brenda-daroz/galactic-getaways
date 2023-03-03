@@ -1,11 +1,17 @@
 
-        <%= simple_form_for @spaceship do |f| %>
-          <%= f.input :name, placeholder: 'spaceship_name', input_html: { class: 'my_input', placeholder: 'spaceship_name' } %>
-          <%= f.input :description, input_html: { class: 'my_input', placeholder: 'description' } %>
-          <%= f.input :speed, collection: 1..6, include_blank: "speed" %>
-          <%= f.input :power, collection: 1..6, include_blank: "power" %>
-          <%= f.input :seats, collection: 1..6, include_blank: "select" %>
-          <%= f.input :price, input_html: { class: 'my_input', placeholder: 'price' } %>
-          <%= f.input :photos, input_html: { multiple: true, class: 'my_input' } %>
-          <%= f.submit class: "btn my_button" %>
-        <% end %>
+<div class="container">
+  <div class="form-inputs col-5 form-container">
+    <h1>List your spaceship</h1>
+    <%= simple_form_for @spaceship do |f| %>
+      <%= f.input :name, input_html: { class: 'my_input', placeholder: 'Enterprise' } %>
+      <%= f.input :description, input_html: { class: 'my_input', placeholder: 'Comfy, speedy spaceship that will take you far' } %>
+      <%= f.input :speed, collection: 1...6, input_html: { class: 'my_input' } %>
+      <%= f.input :power, collection: 1...6, input_html: { class: 'my_input' } %>
+      <%= f.input :seats, collection: 1...6, input_html: { class: 'my_input' } %>
+      <%= f.input :address, input_html: { class: 'my_input', placeholder: 'Rudi-Dutschke-Strasse 26' } %>
+      <%= f.input :price, input_html: { class: 'my_input', placeholder: '0,00' } %>
+      <%= f.input :photos, input_html: { multiple: true, class: 'my_input_purple' } %>
+      <%= f.submit class: "btn btn-primary my_button" %>
+    <% end %>
+  </div>
+</div>
