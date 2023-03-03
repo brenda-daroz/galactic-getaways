@@ -2,8 +2,8 @@
 
     <h1>Book <%= @spaceship.name  %></h1>
     <%= simple_form_for [@spaceship, @booking ] do |f| %>
-      <%= f.input :start_date, html5: true, input_html: { class: 'my_input_date' }%>
-      <%= f.input :end_date, html5: true, input_html: { class: 'my_input_date' } %>
+      <%= f.input :start_date, as: :date, html5: true, input_html: { class: 'my_input_date' }%>
+      <%= f.input :end_date, as: :date, html5: true, input_html: { class: 'my_input_date' } %>
       <%= f.submit class: "btn btn-primary my_button" %>
     <% end %>
 </div>
