@@ -31,7 +31,7 @@ puts 'Creating 10 fake spaceships...'
     seats: rand(1..5)
   )
   1.times do
-    rand_num = rand(2..8)
+    rand_num = rand(1..13)
     file = URI.open("app/assets/images/spaceships/#{rand_num}-spaceship.png")
     spaceship.photos.attach(io: file, filename: "#{rand_num}.png", content_type: "image/png")
   end
