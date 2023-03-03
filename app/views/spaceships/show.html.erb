@@ -16,19 +16,37 @@
 
   <div class="show-content-container">
     <div class="subheaders">
+    <div class="subheaders-features show-content-booking">
       <h4>Features</h4>
-      <p><%= @spaceship.description %></p>
-      <p><%= "Speed:   "%><% @spaceship.speed.to_i.times do  %>
+      <div class="features-content">
+      <div>
+      <p>Speed</p>
+      <p><% @spaceship.speed.to_i.times do  %>
         <i class="fa-solid fa-frog my_icons"></i>
-      <% end %></p>
-      <p><%= "Power:   "%><% @spaceship.power.to_i.times do  %>
+      <% end %>
+      </p>
+      </div>
+      <div>
+      <p>Power</p>
+      <p><% @spaceship.power.to_i.times do  %>
         <i class="fa-solid fa-bolt my_icons"></i>
-      <% end %></p>
-      <p><%= "Seats:   "%><% @spaceship.seats.to_i.times do  %>
+      <% end %>
+      </p>
+      </div>
+      <div>
+      <p>Seats</p>
+      <p><% @spaceship.seats.to_i.times do  %>
        <i class="fa-solid fa-chair my_icons"></i>
       <% end %></p>
+      </div>
+      </div>
+      </div>
+      <div class="subheaders-description">
+      <h4>Description</h4>
+      <p><%= @spaceship.description %></p>
     </div>
-  <div class="show-content-booking">
+    </div>
+    <div class="show-content-booking">
     <h2><%= "$ #{@spaceship.price}" %></h2>
     <%= link_to "Book now", new_spaceship_booking_path(@spaceship.id), class: 'btn btn-primary my_button'%>
   </div>
