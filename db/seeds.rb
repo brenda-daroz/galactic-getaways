@@ -26,9 +26,9 @@ puts 'Creating 10 fake spaceships...'
     address: "Friedrichstrasse #{rand(1..100)}, Berlin",
     description: Faker::Quote.yoda,
     user_id: User.all.sample.id,
-    speed: rand(1..6),
-    power: rand(1..6),
-    seats: rand(1..6)
+    speed: rand(1..5),
+    power: rand(1..5),
+    seats: rand(1..5)
   )
   1.times do
     rand_num = rand(2..8)
