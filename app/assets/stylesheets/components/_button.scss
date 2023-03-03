@@ -26,15 +26,14 @@
   }
 }
 
-
 .my_button_map {
   color: #8552F2;
   border: 2px solid #8552F2;
   border-radius: 10px;
   background-color: #F2F2F2;
   width: fit-content;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   &:hover {
     color: $ice;
